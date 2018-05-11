@@ -37,6 +37,8 @@
 
     <modules>
         <module>/euraka-service</module>
+        <module>gateway-service</module>
+        <module>db-center</module>
     </modules>
 
     <properties>

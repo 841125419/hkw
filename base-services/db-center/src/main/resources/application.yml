@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: service-registry
+
+# Define the port where the Service Registry server would be running
+server:
+  port: 8761
+
+# Defines the Eureka server that is used by the Netflix OSS components to use as the registry
+# for server discovery
+eureka:
+  serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #设置eureka服务器所在的地址，查询服务和注册服务都需要依赖这个地址
+
+mybatis:
+  config-locations: classpath:mybatis/mybatis-config.xml
+  mapper-locations: mybatis/mapper/**/*.xml
+
+spring:
+  datasource:
+    test1:
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: root
+spring:
+  datasource:
+    test2:
+      driverClassName: oracle.jdbc.driver.OracleDriver
+      url: jdbc:oracle:thin:@127.0.0.1:1521:beichuan
+      username: root
+      password: root
+

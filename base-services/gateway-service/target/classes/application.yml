@@ -1,0 +1,27 @@
+server:
+    port: 5555
+
+spring:
+  application:
+    name: gateway-service
+
+eureka:
+  instance:
+    port: 8761
+    ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:${eureka.instance.port}/eureka/
+
+zuul:
+  ignoredServices: '*'
+#    routes:
+#      microservice-provider-user: /ecom/**
+
+#  zuul:
+#   ignoredServices: '*' // 忽略所有请求
+#    routes:
+#      服务名: /ecom/** //允许将服务名映射到ecom
+
