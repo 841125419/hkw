@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: service-registry
+
+# Define the port where the Service Registry server would be running
+server:
+  port: 8761
+
+# Defines the Eureka server that is used by the Netflix OSS components to use as the registry
+# for server discovery
+eureka:
+  instance:
+    hostname: localhost  #设置当前实例的主机名称
+    port: ${server.port} #eureka服务器端口号
+  client:
+    registerWithEureka: false #实例是否在eureka服务器上注册自己的信息以供其他服务发现，默认为true
+    fetchRegistry: false #此客户端是否获取eureka服务器注册表上的注册信息，默认为true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #设置eureka服务器所在的地址，查询服务和注册服务都需要依赖这个地址
+  server:
+    waitTimeInMsWhenSyncEmpty: 0 #在Eureka服务器获取不到集群里对等服务器上的实例时，需要等待的时间，单位为毫秒，默认为1000 * 60 * 5
+    enable-self-preservation: false # 关闭自我保护模式（缺省为打开）
+
+
