@@ -1,8 +1,8 @@
-package com.neo.entity;
+package com.kwantler.entity;
+
+import com.kwantler.enums.UserSexEnum;
 
 import java.io.Serializable;
-
-import com.neo.enums.UserSexEnum;
 
 public class UserEntity implements Serializable {
 
@@ -19,6 +19,14 @@ public class UserEntity implements Serializable {
 
 	public UserEntity(String userName, String passWord, UserSexEnum userSex) {
 		super();
+		this.passWord = passWord;
+		this.userName = userName;
+		this.userSex = userSex;
+	}
+
+	public UserEntity(Long id, String userName, String passWord, UserSexEnum userSex) {
+		super();
+		this.id = id;
 		this.passWord = passWord;
 		this.userName = userName;
 		this.userSex = userSex;

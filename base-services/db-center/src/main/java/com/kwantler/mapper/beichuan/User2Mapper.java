@@ -1,19 +1,19 @@
-package com.kwantler.mapper.test1;
+package com.kwantler.mapper.beichuan;
 
 import com.kwantler.entity.UserEntity;
 
 import java.util.List;
 
-public interface User1Mapper {
+public interface User2Mapper {
 	
-	List<UserEntity> getAll();
+	List<UserEntity> getAll2();
 	
-	UserEntity getOne(Long id);
+	UserEntity getOne2(Long id);
 
-	void add1(UserEntity user);
+	void add2(UserEntity user);
 
-	void update1(UserEntity user);
+	void update2(UserEntity user);
 
-	void delete1(Long id);
+	void delete2(Long id);
 
 }

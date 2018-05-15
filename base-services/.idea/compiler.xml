@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="dbcenter" />
+        <module name="db-center" />
         <module name="euraka-service" />
         <module name="gateway-service" />
       </profile>
