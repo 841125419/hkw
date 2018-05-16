@@ -18,6 +18,20 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <base-services.version>1.0-SNAPSHOT</base-services.version>
+    </properties>
+
+    <modules>
+        <module>/euraka-service</module>
+        <module>gateway-service</module>
+        <module>dbcenter/db-center-service</module>
+        <module>../info-service</module>
+        <module>dbcenter/db-center-api</module>
+    </modules>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -32,21 +46,14 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>1.3.1</version>
             </dependency>
+            <dependency>
+                <groupId>com.kwantler</groupId>
+                <artifactId>db-center-api</artifactId>
+                <version>${base-services.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <modules>
-        <module>/euraka-service</module>
-        <module>gateway-service</module>
-        <module>db-center</module>
-        <module>db-dynamic-center</module>
-    </modules>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.8</java.version>
-        <core-services.version>0.0.4-SNAPSHOT</core-services.version>
-    </properties>
 
     <build>
         <pluginManagement>

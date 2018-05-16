@@ -10,6 +10,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/db-dynamic-center/pom.xml" />
+        <option value="$PROJECT_DIR$/dbcenter/db-center/pom.xml" />
       </set>
     </option>
   </component>

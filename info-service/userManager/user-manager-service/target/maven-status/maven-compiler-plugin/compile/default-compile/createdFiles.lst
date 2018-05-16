@@ -1,0 +1,3 @@
+com\kwantler\userManagerService\UserManagerServiceApplication.class
+com\kwantler\userManagerService\controller\UserController.class
+com\kwantler\userManagerService\bo\UserBo.class

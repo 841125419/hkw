@@ -6,9 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="db-center" />
+        <module name="db-center-api" />
+        <module name="db-center-service" />
         <module name="euraka-service" />
         <module name="gateway-service" />
+        <module name="user-manager-api" />
+        <module name="user-manager-service" />
       </profile>
     </annotationProcessing>
   </component>

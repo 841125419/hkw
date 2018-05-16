@@ -10,18 +10,55 @@ eureka:
     port: 8761
     ip-address: true
   client:
-    register-with-eureka: true
-    fetch-registry: true
     service-url:
       defaultZone: http://localhost:${eureka.instance.port}/eureka/
 
+#zuul:
+#  routes:
+#    db-center-service:
+#      path: /dbCenterService/**
+#      stripPrefix: false
+#    user-manager-service: /userManagerService/**
+#ribbon:
+#  eureka:
+#    enabled: false #配置zuul路由时用将此属性设置为false
+
 zuul:
-  ignoredServices: '*'
-#    routes:
-#      microservice-provider-user: /ecom/**
+  routes:
+    user-manager-service:
+      path: /userManagerService/**
+#      stripPrefix: true
+    db-center-service: /dbCenterService/**
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 5000
 
-#  zuul:
-#   ignoredServices: '*' // 忽略所有请求
-#    routes:
-#      服务名: /ecom/** //允许将服务名映射到ecom
+#  add-proxy-headers: true
+#  max:
+#    host:
+#      connections: 500
+#  host:
+#    socket-timeout-millis: 60000
+#    connect-timeout-millis: 60000
 
+##超时相关设置
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        timeout:
+#          enabled: true
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 60000
+#ribbon:
+#  ReadTimeout: 60000
+#  ConnectTimeout: 60000
+#  MaxAutoRetries: 0
+#  MaxAutoRetriesNextServer: 0
+#  eureka:
+#    enabled: true

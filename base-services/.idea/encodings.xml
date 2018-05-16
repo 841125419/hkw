@@ -2,10 +2,13 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/db-center" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/db-dynamic-center" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dbcenter/db-center-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dbcenter/db-center-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/euraka-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../info-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../info-service/userManager/user-manager-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../info-service/userManager/user-manager-service" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

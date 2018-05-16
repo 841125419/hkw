@@ -1,6 +1,6 @@
 spring:
   application:
-    name: service-registry
+    name: euraka-service
 
 # Define the port where the Service Registry server would be running
 server:
