@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/dbcenter/db-center-service-1003/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

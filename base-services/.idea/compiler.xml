@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="db-center-api" />
         <module name="db-center-service" />
+        <module name="db-center-service-1003" />
         <module name="euraka-service" />
         <module name="gateway-service" />
         <module name="user-manager-api" />

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.kwantler.mapper.User1MapperTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.699 sec - in com.kwantler.mapper.User1MapperTest

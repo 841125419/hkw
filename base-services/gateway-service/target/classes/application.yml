@@ -27,7 +27,7 @@ zuul:
   routes:
     user-manager-service:
       path: /userManagerService/**
-#      stripPrefix: true
+#      stripPrefix: true //默认是true
     db-center-service: /dbCenterService/**
 #hystrix:
 #  command:
@@ -45,20 +45,20 @@ zuul:
 #    socket-timeout-millis: 60000
 #    connect-timeout-millis: 60000
 
-##超时相关设置
-#hystrix:
-#  command:
-#    default:
-#      execution:
-#        timeout:
-#          enabled: true
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 60000
-#ribbon:
-#  ReadTimeout: 60000
-#  ConnectTimeout: 60000
-#  MaxAutoRetries: 0
-#  MaxAutoRetriesNextServer: 0
-#  eureka:
-#    enabled: true
+#超时相关设置
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
+  eureka:
+    enabled: true

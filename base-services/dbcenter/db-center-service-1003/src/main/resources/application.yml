@@ -1,0 +1,54 @@
+# Define the port where the Service Registry server would be running
+server:
+  port: 1003
+
+# Defines the Eureka server that is used by the Netflix OSS components to use as the registry
+# for server discovery
+eureka:
+  instance:
+      port: 8761
+  hostname: localhost
+  serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/ #设置eureka服务器所在的地址，查询服务和注册服务都需要依赖这个地址
+
+mybatis:
+  config-locations: classpath:mybatis/mybatis-config.xml
+  mapper-locations: mybatis/mapper/**/*.xml
+
+spring:
+  application:
+    name: db-center-service
+  datasource:
+    test1:
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&useSSL=false
+      username: root
+      password: root
+      type: com.zaxxer.hikari.HikariDataSource
+      maximum-pool-size: 500
+      connection-timeout: 30000
+      idle-timeout: 600000
+      hikari:
+        maxLifetime: 1765000 #一个连接的生命时长（毫秒），超时而且没被使用则被释放（retired），缺省:30分钟，建议设置比数据库超时时长少30秒以上
+        maximumPoolSize: 15 #连接池中允许的最大连接数。缺省值：10；推荐的公式：((core_count * 2) + effective_spindle_count)
+        connection-test-query: select 1
+    beichuan:
+      driverClassName: oracle.jdbc.driver.OracleDriver
+      url: jdbc:oracle:thin:@127.0.0.1:1521:beichuan
+      username: root
+      password: root
+      type: com.zaxxer.hikari.HikariDataSource
+      maximum-pool-size: 500
+      connection-timeout: 30000
+      idle-timeout: 600000
+      hikari:
+        maxLifetime: 1765000 #一个连接的生命时长（毫秒），超时而且没被使用则被释放（retired），缺省:30分钟，建议设置比数据库超时时长少30秒以上
+        maximumPoolSize: 15 #连接池中允许的最大连接数。缺省值：10；推荐的公式：((core_count * 2) + effective_spindle_count)
+        connection-test-query: select 1
+test1:
+  basePackages: com.kwantler.mapper.test1
+  locationPattern: classpath:mybatis/mapper/test1/*.xml
+beichuan:
+  basePackages: com.kwantler.mapper.beichuan
+  locationPattern: classpath:mybatis/mapper/beichuan/*.xml
+
